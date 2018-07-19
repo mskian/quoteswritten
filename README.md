@@ -1,10 +1,10 @@
 # Quotes Written
 
-> Quotes Written - Add your Favourite Quotes and Sayings
+> Quotes Written - CLI Tool Using Node.js
 
 ## About
 
-<p>A Simple CLI tool to Save your Favorite Quotes and Sayings</p>
+<p>A Simple CLI tool to Save your Favorite Quotes and Sayings.</p>
 
 
 ## Installation
@@ -34,8 +34,8 @@ quoteswritten help
 ```
 ## Restful API
 
-Build Restful API using `Express.js`
-it's Under development Full feature's will Updated soon...!
+<p>Build Restful API using `Express.js`</p>
+<p>it's Under development Full feature's will Updated soon...!</p>
 
 - Test Restful API
 
