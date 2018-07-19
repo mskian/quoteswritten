@@ -77,7 +77,7 @@ if (data.quoteswritten.length) {
 function random(){
 var quotesContent = require('./quoteswritten.json');
 var random = quotesContent.quoteswritten[Math.floor(Math.random() * quotesContent.quoteswritten.length)];
-console.log("\t",chroma.lyellow(random.quotes))
+console.log(chroma.lyellow(random.quotes))
 }
 
 //Remove quotes from the list.
