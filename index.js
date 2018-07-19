@@ -42,7 +42,7 @@ function setData(data) {
 
 //Displays usage
 function usage() {
-	console.log(chroma.lyellow('Usage:\n \nquoteswritten [command]\n \nExamples:\n \nquoteswritten add "My First Quotes" \nquoteswritten list --List all Quotes from Database \nquoteswritten clear --Clear all quotes from the database \nquoteswritten delete 1 --DELETE a quotes with given id \nquoteswritten help'));
+	console.log(chroma.lyellow('Usage:\n \nquoteswritten [command]\n \nExamples:\n \nquoteswritten add "My First Quotes" \nquoteswritten list --List all Quotes from the Database \nquoteswritten clear --Clear all quotes from the database \nquoteswritten delete 1 --DELETE a quotes with given id \nquoteswritten help'));
 }
 
 //Adds a Quotes

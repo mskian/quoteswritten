@@ -26,7 +26,7 @@ quoteswritten [command]
 Examples:
  
 quoteswritten add "My First Quotes" 
-quoteswritten list --List all Quotes from Database 
+quoteswritten list --List all Quotes from the Database 
 quoteswritten clear --Clear all quotes from the database 
 quoteswritten delete 1 --DELETE a quotes with given id 
 quoteswritten help
