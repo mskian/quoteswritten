@@ -42,6 +42,9 @@ quoteswritten help
 ```
 npm start
 ```
+- `http://localhost:8000/`
+- `http://localhost:8000/random`
+- `http://localhost:8000/api/all`
 
 ## License
 
