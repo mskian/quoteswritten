@@ -11,6 +11,7 @@
 
 ```
 git clone https://github.com/mskian/quoteswritten.git
+cd quoteswritten
 npm install
 npm link
 ```
@@ -34,6 +35,8 @@ quoteswritten help
 
 ```
 ## Restful API
+
+**Under Development**
 
 <p>Build Restful API using Express.js + Static Site</p>
 <p>it's Under development Full feature's will be Updated soon...!</p>
