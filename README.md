@@ -35,7 +35,7 @@ quoteswritten help
 ```
 ## Restful API
 
-<p>Build Restful API using Express.js</p>
+<p>Build Restful API using Express.js + Static Site</p>
 <p>it's Under development Full feature's will be Updated soon...!</p>
 
 - Test Restful API
