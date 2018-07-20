@@ -2,6 +2,7 @@
 
 var fs = require('fs');
 var chalk = require('chalk');
+var emoji = require('node-emoji');
 
 //Path to quotes json file
 var QUOTES_JSON_PATH = "./quoteswritten.json";
@@ -13,6 +14,7 @@ function init() {
 	//create file if it's present.
 	if (!fs.existsSync(QUOTES_JSON_PATH)) {
 		console.log("Initialising storage.\n Creating `quoteswritten.json` file");
+		console.log('');
 		setData({
 			quoteswritten: []
 		});
@@ -77,7 +79,7 @@ if (data.quoteswritten.length) {
 function random(){
 var quotesContent = require(QUOTES_JSON_PATH);
 var random = quotesContent.quoteswritten[Math.floor(Math.random() * quotesContent.quoteswritten.length)];
-console.log(chalk.yellowBright(random.quotes));
+console.log(emoji.get('nerd_face'), chalk.bgYellowBright.bold.black(random.quotes));
 }
 
 //Remove quotes from the list.
@@ -117,17 +119,17 @@ function clear() {
 
 //Formating for errors
 function displayError(string){
-	console.log(chalk.bgGreenBright(chalk.black(string)));
+	console.log(emoji.get('pushpin'), chalk.bgGreenBright(chalk.bold.black(string)), emoji.get('file_cabinet'));
 }
 
 // Print Stored Quotes
 function printCompleted(data){
 	if (data.quoteswritten.length) {
 				//print the Quotes list. using ANSI colors and formating
-				console.log(chalk.underline.bgMagenta("Quotes Written:"));
+				console.log(emoji.get('nerd_face'), chalk.underline.bold.bgMagenta("Quotes Written"), emoji.get('wink'));
 				console.log('')
 				data.quoteswritten.forEach(function (quotes, index) {
-					console.log(chalk.yellowBright(index + 1 + ". ["),("👉"),chalk.yellowBright("] "),quotes.quotes);
+					console.log(chalk.yellowBright(index + 1 + ". ["), emoji.get('point_right'), chalk.yellowBright("] "), quotes.quotes);
 				});
 			}
 }
