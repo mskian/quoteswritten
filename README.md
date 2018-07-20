@@ -29,13 +29,14 @@ quoteswritten add "My First Quotes"
 quoteswritten list --List all Quotes from the Database 
 quoteswritten clear --Clear all quotes from the database 
 quoteswritten delete 1 --DELETE a quotes with given id 
+quoteswritten random --Display Random Quotes 
 quoteswritten help
 
 ```
 ## Restful API
 
 <p>Build Restful API using Express.js</p>
-<p>it's Under development Full feature's will Updated soon...!</p>
+<p>it's Under development Full feature's will be Updated soon...!</p>
 
 - Test Restful API
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
-var chroma = require('@v3rse/chroma');
+var chalk = require('chalk');
 
 //Path to quotes json file
 var QUOTES_JSON_PATH = "./quoteswritten.json";
@@ -42,7 +42,7 @@ function setData(data) {
 
 //Displays usage
 function usage() {
-	console.log(chroma.lyellow('Usage:\n \nquoteswritten [command]\n \nExamples:\n \nquoteswritten add "My First Quotes" \nquoteswritten list --List all Quotes from the Database \nquoteswritten clear --Clear all quotes from the database \nquoteswritten delete 1 --DELETE a quotes with given id \nquoteswritten help'));
+	console.log(chalk.yellowBright('Usage:\n \nquoteswritten [command]\n \nExamples:\n \nquoteswritten add "My First Quotes" \nquoteswritten list --List all Quotes from the Database \nquoteswritten clear --Clear all quotes from the database \nquoteswritten delete 1 --DELETE a quotes with given id \nquoteswritten random --Display Random Quotes \nquoteswritten help'));
 }
 
 //Adds a Quotes
@@ -75,9 +75,9 @@ if (data.quoteswritten.length) {
 
 // Display Random Quotes on Terminal
 function random(){
-var quotesContent = require('./quoteswritten.json');
+var quotesContent = require(QUOTES_JSON_PATH);
 var random = quotesContent.quoteswritten[Math.floor(Math.random() * quotesContent.quoteswritten.length)];
-console.log(chroma.lyellow(random.quotes))
+console.log(chalk.yellowBright(random.quotes));
 }
 
 //Remove quotes from the list.
@@ -117,17 +117,17 @@ function clear() {
 
 //Formating for errors
 function displayError(string){
-	console.log(chroma.bggreen(chroma.black(string)));
+	console.log(chalk.bgGreenBright(chalk.black(string)));
 }
 
 // Print Stored Quotes
 function printCompleted(data){
 	if (data.quoteswritten.length) {
 				//print the Quotes list. using ANSI colors and formating
-				console.log(chroma.underline.bggreen("Quotes Written:"));
+				console.log(chalk.underline.bgMagenta("Quotes Written:"));
 				console.log('')
 				data.quoteswritten.forEach(function (quotes, index) {
-					console.log(chroma.lyellow(index + 1 + ". ["),("👉"),chroma.lyellow("] "),quotes.quotes);
+					console.log(chalk.yellowBright(index + 1 + ". ["),("👉"),chalk.yellowBright("] "),quotes.quotes);
 				});
 			}
 }
@@ -146,13 +146,13 @@ switch (command) {
 		del(argument - 1);
 		break;
 	case "clear":
-			clear();
+		clear();
 		break;
 	case "help":
 		usage();
 		break;
 	case "list":
-			list();
+		list();
 		break;
 	case "random":
 		random();
