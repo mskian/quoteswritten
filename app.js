@@ -19,8 +19,17 @@ app.get('/random', function (req, res) {
     res.send(random.quotes)
     });
   
-    app.get('/api/all', function (req, res) {
-      var data = require('./quoteswritten.json');
-      res.header("Content-Type",'application/json');
-      res.send(JSON.stringify(data));
-      });
+// Get all 
+app.get('/api/all', function (req, res) {
+    var data = require('./quoteswritten.json');
+    res.header("Content-Type",'application/json');
+    res.send(JSON.stringify(data));
+    });
+
+// Random
+app.get('/api/random', function (req, res) {
+  var quotesContent = require('./quoteswritten.json');
+  var random = quotesContent.quoteswritten[Math.floor(Math.random() * quotesContent.quoteswritten.length)];
+  res.header("Content-Type",'application/json');
+  res.send(JSON.stringify(random));
+  });
